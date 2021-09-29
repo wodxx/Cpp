@@ -33,7 +33,8 @@ public:
 
 /*********************************
 
-[遍历]
+[递归]
+
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
