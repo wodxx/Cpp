@@ -12,7 +12,8 @@ public:
       int first = GetFirstK(nums, 0, nums.size() - 1, target);
       int last = GetLastK(nums, 0, nums.size() - 1, target);
       if(first > -1 && last > -1){
-        count = last - first + 1; //这种情况下有目标之的个数求出并返回
+      //这种情况下有目标值的个数求出并返回
+        count = last - first + 1; 
         return count;
       } else return 0;
     } else return 0;
