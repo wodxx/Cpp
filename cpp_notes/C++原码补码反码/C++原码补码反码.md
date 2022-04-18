@@ -40,9 +40,7 @@
 
 反码的表示方法是:
 
->正数的反码是其本身
-
->负数的反码是在其原码的基础上, 符号位不变，其余各个位取反.
+>正数的反码是其本身,负数的反码是在其原码的基础上, 符号位不变，其余各个位取反.
 
 [+1] = [00000001]原 = [00000001]反
 
@@ -113,4 +111,4 @@
 ****使用补码, 不仅仅修复了0的符号以及存在两个编码的问题, 而且还能够多表示一个最低数. 这就是为什么8位二进制, 使用原码或反码表示的范围为[-127, +127], 而使用补码表示的范围为[-128, 127].
 因为机器使用补码, 所以对于编程中常用到的32位int类型, 可以表示范围是: [-231, 231-1] 因为第一位表示的是符号位.而使用补码表示时又可以多保存一个最小值.****
 
-[参考]（https://blog.csdn.net/wo17fang/article/details/52241682?ops_request_misc=&request_id=&biz_id=&utm_medium=distribute.pc_search_result.none-task-blog-2~all~es_rank~default-3-52241682.pc_search_all_es&utm_term=C%2B%2B+%E8%A1%A5%E5%90%97%E5%8F%8D%E7%A0%81&spm=1018.2226.3001.4187)
+[参考](https://blog.csdn.net/wo17fang/article/details/52241682?ops_request_misc=&request_id=&biz_id=&utm_medium=distribute.pc_search_result.none-task-blog-2~all~es_rank~default-3-52241682.pc_search_all_es&utm_term=C%2B%2B+%E8%A1%A5%E5%90%97%E5%8F%8D%E7%A0%81&spm=1018.2226.3001.4187)

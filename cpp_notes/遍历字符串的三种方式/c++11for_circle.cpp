@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+using namespace std;
 
 int value = 0;
 int string_to_int(string s2){
