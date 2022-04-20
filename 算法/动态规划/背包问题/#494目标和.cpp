@@ -20,10 +20,10 @@ public:
     for (int i = 1; i <= len; i++) {
       for (int j = 0; j <= neg; j++) {  //neg<nums[j] 不能选j，dp[i][j] = dp[i - 1][j]
         dp[i][j] = dp[i - 1][j];        //neg>=nums[j],能选j，总的个数为dp[i - 1][j] + dp[i - 1][j - nums[i - 1]];
-        if (j >= nums[i - 1]) {
+        if (j >= nums[i - 1]) {         //这里j从0开始
           dp[i][j] += dp[i - 1][j - nums[i - 1]];
         }
-      }
+      }                                  //在一堆元素中找到组成某一target的所有组合个数，属于0 1背包问题
     }
 
     return dp[len][neg];

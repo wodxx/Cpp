@@ -13,7 +13,7 @@ int main(){
   for(int i = 1; i <= 8; i++){
     for(int j = 1; j <= sum; j++){
       for(int k = 0; k <= j / coins[i - 1]; k++){   // 这里k是从0算起，因此为i-1
-        dp[i][j] += dp[i - 1][k * coins[i - 1]];    // 算系数k的问题
+        dp[i][j] += dp[i - 1][j - k * coins[i - 1]];    // 算系数k的问题
       }
     }
   }
