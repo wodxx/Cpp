@@ -1,5 +1,8 @@
 C++ 多态及其实现
 C++11 的新特性
 右值引用
+结构体和类的区别有哪些
+C++编译过程、编译的过程具体做了什么
+c++面向过程和面向对象的区别
 vector 与 list、map 与 unordered_map 比较
 [参考]https://leetcode-cn.com/circle/discuss/owG1Fb/
