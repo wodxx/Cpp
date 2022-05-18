@@ -109,8 +109,11 @@ map<int, int> map1;
         for (int i=0; i<list.size(); i++){
             map1[i] = list[i];
         }
+        //另外的遍历map的写法
+        //for(auto it = m.begin(); it != m.end(); ++it)
         for (map<int, int>::iterator i = map1.begin(); i != map1.end(); i++){
             cout << i->first << ' ' << i->second << endl;
+            //map中值的表示方法为it->second
         }
         if (map1.find(3) != map1.end()) {
             cout << "find key=" << map1.find(3)->first << ", value=" << map1.find(3)->second << endl;
