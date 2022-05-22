@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespaes std;
+using namespace std;
 
 class Solution {
 public:
