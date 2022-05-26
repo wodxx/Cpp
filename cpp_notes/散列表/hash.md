@@ -38,7 +38,7 @@ dict.insert(pair<string, int>("Jone", 2)); // {"Tom"->1, "Jone"->2}
  
 dict.insert(pair<string, string>("string", "字符串"));//模板类型pair：构造了一个匿名对象插入到map
 dict.insert(make_pair("apple", "苹果"));//模板函数make_pair：偷懒了，实际调的是pair
-dict.insert({ "left", "左边" });
+dict.insert({ "left", "左边" });//map和set常用这种插入方式，insert
 dict.insert({ "left", "剩余" });//插入不进去了，因为key值已经有了
 ```
 
@@ -56,7 +56,7 @@ printf("Mary is in class %d\n", dict["Mary"]);
 
 >查找关键字
 
-***count***
+***count()***
 
 在 C++ 中，查找关键字是否被映射过，可以直接用 count( ) 方法。使用count，返回的是被查找元素的个数。如果有，返回1；否则，返回0。注意，map中不存在相同元素(Tom,Mary)，所以返回值只能是1或0。
 
@@ -107,7 +107,7 @@ clear | 清空std::map 就是以key来查找value而设计，根据key排序。
     //list=[5,14,34,22,39,5];
 map<int, int> map1;
         for (int i=0; i<list.size(); i++){
-            map1[i] = list[i];
+            map1[i] = list[i];  //此时map里面key是i，即index，而值为map1[1]
         }
         //另外的遍历map的写法
         //for(auto it = m.begin(); it != m.end(); ++it)
@@ -119,7 +119,7 @@ map<int, int> map1;
             cout << "find key=" << map1.find(3)->first << ", value=" << map1.find(3)->second << endl;
         }
         if (map1.count(5) > 0) {
-            cout << "count 5: " << map1.count(5) << endl;
+            cout << "count 5: " << map1.count(5) << endl;   //最后一个5的index为 6则映射不到map1里面，故count 1个5
         }
 
    //输出：
