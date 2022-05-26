@@ -22,6 +22,7 @@ ListNode * MergeList(ListNode * head1,ListNode * head2){
         MergeHeadNode = head2;
         MergeHeadNode -> next = MergeList(head1,head2 -> next);
     }
+    return MergeHeadNode;
 }
 int main(){
 
