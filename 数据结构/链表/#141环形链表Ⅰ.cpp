@@ -7,6 +7,7 @@ struct ListNode {
   ListNode(int x) : val(x), next(NULL) {}
 };
 
+//判断链表是否有环
 //两指针
 class Solution {
 public:

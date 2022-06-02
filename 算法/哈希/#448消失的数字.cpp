@@ -24,7 +24,7 @@ public:
     int i = 0;
     while (i < nums.size()) {                   //抽屉算法
       if (nums[nums[i] - 1] != nums[i]) {     //某一下标的值是否等于该下标加1后的值，不等于则
-        swap (nums[nums[i] - 1], nums[i]);   //把该值放在其值减1的下标位置
+        swap (nums[nums[i] - 1], nums[i]);   //把该值放在其值减1的下标位置(因为nums[i]的值应该在nums[nums[i]-1])的位置上,值和下标相等)
       } else {
         i++;
       }
