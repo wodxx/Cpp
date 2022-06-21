@@ -18,7 +18,7 @@ int main(){
                 return JudgeTree(root -> left,root -> right);
             }
         }
-        bool JudgeTree(TreeNode * left,TreeNode * right){
+        bool JudgeTree(TreeNode * left, TreeNode * right){
             if (left == NULL && right == NULL){
                 //直到左右两子节点为空时则返回true
                 return true;
