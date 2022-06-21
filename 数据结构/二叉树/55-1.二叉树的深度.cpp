@@ -18,7 +18,7 @@ public:
         que.push(root); 
         while(!que.empty()){
             int size = que.size();
-            for(int i = 0; i < size; i++){
+            for(int i = 0; i < size; i++){                     //开启一个循环pop完栈的元素
                 TreeNode* pNode = que.front();
                 que.pop();
                 if (pNode -> left) que.push(pNode -> left); 
