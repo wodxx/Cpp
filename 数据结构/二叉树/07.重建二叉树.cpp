@@ -64,3 +64,30 @@ int main(){
 重建二叉树就是用分治的思想遍历找根节点，即每一个节点都会被遍历。
 
 ******************************************************************************************/
+
+// 2022 6.10
+
+class Solution {
+public:
+  TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+    if (preorder.size() == 0) return nullptr;   //前序首元素为根节点
+    TreeNode* root = new TreeNode(preorder[0]);
+    TreeNode* cur = root;
+    int index = 0;
+    for (int i = 0; i < inorder.size(); ++i) {    //在中序里根据根节点分左右子树
+      if (preorder[0] == inorder[i]) {
+        index = i;                            //注意这里！这里是将i赋值给index，不是index == i
+        break;
+      }
+    }
+    //左右子树的前中序递归
+    vector<int> leftpreorder, rightpreorder, leftinorder,  rightinorder;
+    for (int i = 1; i <= index; ++i) leftpreorder.push_back(preorder[i]); //前序从1开始，绕过根节点
+    for (int i = index + 1; i < preorder.size(); ++i) rightpreorder.push_back(preorder[i]);
+    for (int i = 0; i < index; ++i) leftinorder.push_back(inorder[i]);
+    for (int i = index + 1; i < inorder.size(); ++i) rightinorder.push_back(inorder[i]);
+    cur -> left = buildTree(leftpreorder, leftinorder);
+    cur -> right = buildTree(rightpreorder, rightinorder);
+    return root;
+  }
+};

@@ -14,7 +14,7 @@ TreeNode* lca(TreeNode* root, TreeNode* p, TreeNode* q){
     if((root == p) || (root == q)) return root;
 
     //递归左右子树
-    TreeNode* lTree = lca(root -> left, p, q);
+    TreeNode* lTree = lca(root -> left, p, q);             //定义左右树的节点来接收递归后的结果
     TreeNode* rTree = lca(root -> right, p, q);
 
     if(lTree && rTree) return root;
