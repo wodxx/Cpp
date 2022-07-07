@@ -9,6 +9,7 @@ int count = 0;
 const string num[10] = {"zero", "one", "two", "three", "four", "five",
   "six", "seven", "eight", "nine"};
 
+//知识点： 字符对应取字符串数组中的字符串元素
 int main () {
   cin >> N; 
   int sum = 0;
