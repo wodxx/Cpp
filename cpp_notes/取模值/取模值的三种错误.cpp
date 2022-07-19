@@ -15,7 +15,7 @@
 
 #include <iostream>
 using namespace std;
-
+define long long LL
 //错误一：用max函数来比较几个数中的大数时，先行取模  
 
 //正确做法：在求max的时候不要先取mod，而是都以long long型数据比大小，
