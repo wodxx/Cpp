@@ -29,7 +29,7 @@ public:
   }
 };
 
-//回文特性解法：数组长度为n，回文前后对应，则索引i处元素应该等于n-i-0处的元素
+//回文特性解法：数组长度为n，回文前后对应，则索引i处元素应该等于n-i-1处的元素
 class Solution {
 public:
   bool isPalindrome(ListNode* head) {
@@ -41,7 +41,7 @@ public:
     }
     for (int i = 0; i < vec.size(); i++) {
       if (vec[i] != vec[vec.size() - i - 1]) return false;
-      //数组长度为n， 回文前后对应，则索引i处元素应该等于n-i-0处的元素
+      //数组长度为n， 回文前后对应，则索引i处元素应该等于n-i-1处的元素
     }
     return true;
   }

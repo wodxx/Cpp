@@ -7,7 +7,7 @@ struct ListNode{
 
   ListNode* removeNthFromEnd(ListNode* head, int n) {
      // 删除节点的题目 要new一个新的头结点来进行操作
-    ListNode* resultList = new ListNode(-1);
+    ListNode* resultList = nullptr;
     resultList -> next = head;
     ListNode* pre = resultList;    //pre是新头结点的移动指针，fast和slow是原头结点的移动指针
     ListNode* fast = head;
