@@ -1,0 +1,50 @@
+{
+    "root": {
+        "data": {
+            "id": "clm0upwf1t40",
+            "created": 1658476499699,
+            "text": "Linux内核"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "clm0uwbd1hk0",
+                    "created": 1658476513664,
+                    "text": "内核的概念"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "clm13kadh0g0",
+                    "created": 1658477192760,
+                    "text": "内核的能力",
+                    "layout_mind_offset": {
+                        "x": 473,
+                        "y": 90
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "clm152uozmg0",
+                    "created": 1658477311535,
+                    "text": "内核如何工作"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "clm19xuood40",
+                    "created": 1658477692471,
+                    "text": "两态间的转换"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
