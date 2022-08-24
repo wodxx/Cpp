@@ -8,6 +8,7 @@ using namespace std;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+// 搜索二叉树的公共祖先分四种情况
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {

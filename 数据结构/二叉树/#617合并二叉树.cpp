@@ -10,6 +10,9 @@ int val;
   TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+// 新生成树或者链表，new一个新的节点出来，然后计算该节点的值，再递归计算该节点的
+// 左右子节点
+
 class Solution {
 public:
   TreeNode* mergeTrees(TreeNode* root1, TreeNode* root2) {
@@ -23,7 +26,3 @@ public:
     delete root;
   }
 };
-
-int main() {
-  return 0;
-}
