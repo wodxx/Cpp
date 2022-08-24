@@ -16,8 +16,8 @@ public:
       used[i] = true;                                      
       temp.push_back(nums[i]);
       backTrack(used, nums);                              //开始跳栈后，连续执行下面两条语句，直到跳栈完全
-      temp.pop_back();
-      used[i] = false;
+      temp.pop_back();                                    // 回溯法的两步
+      used[i] = false;                                    // 需要恢复现场则需要回溯
     }
   }
   vector<vector<int>> permute(vector<int>& nums) {

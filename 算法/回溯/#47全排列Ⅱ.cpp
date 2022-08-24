@@ -19,12 +19,12 @@ public:
         used[i] = 1;
         backTrack (used, nums);
         temp.pop_back();
-        used[i] = 0;
+        used[i] = 0;                           // 有判断是否使用过时，递归回来一定要使i成未使用状态
       }
     }
   }
   vector<vector<int>> permuteUnique(vector<int>& nums) {
-    sort(nums.begin(), nums.end());
+    sort(nums.begin(), nums.end());            // 有负数 先排序
     vector<int> used(nums.size(), 0);
     backTrack (used, nums);
     return results;

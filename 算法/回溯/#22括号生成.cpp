@@ -17,12 +17,12 @@ public:
       backTrack(n, left + 1, right);
       str.pop_back();
     }
-    if (right < left) {
+    if (right < left) {              // 这里右指针的边界为left
       str.push_back(')');
-      backTrack(n, left, right + 1);
-      str.pop_back();
-    }
-  }
+      backTrack(n, left, right + 1);  // 递归
+      str.pop_back();                 // 回溯 
+    }                                 // 回溯的操作就是在记录当前的样式之后撤销
+  }                                   // 当前的样式寻求有另一种新的样式
   vector<string> generateParenthesis(int n) {
     backTrack (n, 0, 0);   //左右括号的个数从0开始做加法
     return results;

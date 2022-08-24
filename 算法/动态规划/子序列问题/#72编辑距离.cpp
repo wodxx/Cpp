@@ -27,7 +27,7 @@ public:
 
     for (int i = 1; i <= len1; i++) {
       for (int j = 1; j <= len2; j++) {
-        if (word1[i - 1] == word2[j - 1]) {
+        if (word1[i - 1] == word2[j - 1]) {                                     // 注意这里要判断前一项是否相同
           dp[i][j] = dp[i - 1][j - 1];                       
         } else {                                                                //word1增、删、换三种情况取最小
           dp[i][j] = min({dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]}) + 1;

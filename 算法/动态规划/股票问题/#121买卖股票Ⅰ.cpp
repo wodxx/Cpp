@@ -9,6 +9,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// 动态规划解法
+class Solution {
+public:
+  int maxProfit(vector<int>& prices) {
+    if (prices.size() == 0) return 0;
+    vector<vector<int>> dp(prices.size(), vector<int> (2));
+    dp[0][0] -= prices[0];                               // dp[i][0]: 第i填持股能获得的收益 
+    dp[0][1] = 0;                                        // dp[i][1]: 第i天不持股能获得的收益
+    for (int i = 1; i < prices.size(); i++) {
+      dp[i][0] = max(dp[i - 1][0], -prices[i]);          // 前一天持股和恰好是当天买入股二选最大
+      dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] + prices[i]); // 前一天不持股和当天卖出的的情况二选最大
+    }                                                    // 当天卖出的情况为前一天持股的收益加当天的股价之和
+    return dp[prices.size() - 1][1];
+  }
+};
+
+
+// 最优间距解法
 class Solution {
 public:
   int maxProfit(vector<int>& prices) {
