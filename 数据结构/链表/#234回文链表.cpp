@@ -11,7 +11,7 @@ struct ListNode {
 class Solution {
 public:
   bool isPalindrome(ListNode* head) {
-    stack<int> st;
+    stack<int> st;                         // 栈里要push的是链表节点的value，不是一个节点
     ListNode* pNode = head;
     while (pNode != nullptr) {
       st.push(pNode -> val);
