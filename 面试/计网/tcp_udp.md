@@ -23,6 +23,20 @@
 
 ## 三. UDP与TCP的区别
 
+[口头回答]
+
+1.TCP是面向对象连接；而UDP是无面向对象连接
+
+2.TCP确保所传输的数据一定会到达目的地，但时间却不能保证；而UDP不确保数据会按原来顺序到达，但具有实时性
+
+3.TCP的使用场景是不在意传输数据速度，但在意传输数据准确；而UDP的使用场景则是对实时性要求较高
+
+4.TCP的首部开销大，占用20字节；而UDP的首部开销小，只占用8个字节
+
+5.TCP只支持点对点的数据传输；而UDP支持一对一、一对多、多对多等各种场景
+
+6.TCP有拥塞控制和流量控制来确保数据的安全性，但如果网络拥塞的话，速度会比较慢；UDP即使在网络拥塞的时候，传输速度也不会慢
+
 **UDP**
 udp的包头：
 ![在这描述](https://img-blog.csdnimg.cn/32402a8897fc420f990d1a3d965d237a.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5YWI6L-bMzPlj7c=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
@@ -70,7 +84,8 @@ seq:序号（随机生成）
 目的：
 >进行三次握手的主要作用就是为了确认双方的接收能力和发送能力是否正常、指定自己的初始化序列号为后面的可靠性传送做准备。实质上其实就是连接服务器指定端口，建立TCP连接，并同步连接双方的序列号和确认号，交换TCP窗口大小信息。(建立一个TCP连接时，需要客户端和服务器总共发送3个包)。
 >
-[三次握手四次挥手详解](https://blog.csdn.net/hyg0811/article/details/102366854?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163247171516780269888961%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163247171516780269888961&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-102366854.first_rank_v2_pc_rank_v29&utm_term=tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B&spm=1018.2226.3001.4187)
+
+![三次握手四次挥手详解](https://blog.csdn.net/hyg0811/article/details/102366854?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163247171516780269888961%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163247171516780269888961&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-102366854.first_rank_v2_pc_rank_v29&utm_term=tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B&spm=1018.2226.3001.4187)
 
 ***四次挥手***
 FIN=1：在报文中加入FIN，表示要断开链接，客户端会停止向服务端发数据；
