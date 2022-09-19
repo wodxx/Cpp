@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
 // 最长回文子序列 LC516
 // 区别于最长回文子串
 class Solution {
